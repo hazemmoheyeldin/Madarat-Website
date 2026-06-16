@@ -158,7 +158,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 10px 40px;
+            padding: 14px 40px 0;
             transition: all 0.4s;
             display: flex;
             flex-direction: column;
@@ -171,21 +171,23 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            margin-bottom: 6px;
         }
 
         /* Tagline row: visible only in hero (non-scrolled) state */
         .navbar-tagline {
             text-align: center;
             color: var(--gold-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 4px 0 6px;
+            padding: 0 0 12px;
+            margin-top: -2px;
             opacity: 0.9;
             transition: all 0.4s;
             overflow: hidden;
-            max-height: 40px;
+            max-height: 36px;
         }
 
         /* Hide tagline row when scrolled */
@@ -193,6 +195,7 @@
             max-height: 0;
             padding: 0;
             opacity: 0;
+            margin-top: 0;
         }
 
         .navbar.scrolled {
