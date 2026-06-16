@@ -158,11 +158,41 @@
             left: 0;
             right: 0;
             z-index: 999;
-            padding: 15px 40px;
+            padding: 10px 40px;
             transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        /* Top row: nav-logo (hidden) + nav-links + nav-right */
+        .navbar-top {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Tagline row: visible only in hero (non-scrolled) state */
+        .navbar-tagline {
+            text-align: center;
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 0 6px;
+            opacity: 0.9;
+            transition: all 0.4s;
+            overflow: hidden;
+            max-height: 40px;
+        }
+
+        /* Hide tagline row when scrolled */
+        .navbar.scrolled .navbar-tagline {
+            max-height: 0;
+            padding: 0;
+            opacity: 0;
         }
 
         .navbar.scrolled {
@@ -229,7 +259,7 @@
             position: relative;
             background: linear-gradient(135deg, var(--darker) 0%, #16213e 50%, #1a2744 100%);
             overflow: visible;
-            padding-top: 160px;
+            padding-top: 190px;
             padding-bottom: 80px;
         }
 
@@ -1128,31 +1158,33 @@
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <a href="#" class="nav-logo">
-            <img src="./madarat-logo.png" alt="Madarat Development & Tourism — مدارات التطوير والسياحة">
-        </a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
-            <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
-            <li><a href="#expertise" data-en="Expertise" data-ar="خبراتنا">Expertise</a></li>
-            <li><a href="#partners" data-en="Partners" data-ar="الشركاء">Partners</a></li>
-            <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
-        </ul>
-        <div class="nav-right">
-        <div class="lang-toggle">
-            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-            <button class="lang-btn" onclick="switchLang('ar')">عربي</button>
+        <div class="navbar-top">
+            <a href="#" class="nav-logo">
+                <img src="./madarat-logo.png" alt="Madarat Development & Tourism — مدارات التطوير والسياحة">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
+                <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="#expertise" data-en="Expertise" data-ar="خبراتنا">Expertise</a></li>
+                <li><a href="#partners" data-en="Partners" data-ar="الشركاء">Partners</a></li>
+                <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLang('ar')">عربي</button>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </button>
-        </div>
+        <div class="navbar-tagline" data-en="Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة &mdash; المملكة العربية السعودية">Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia</div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <p class="hero-tagline fade-in" data-en="Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة &mdash; المملكة العربية السعودية">Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia</p>
             <div class="hero-logo-wrap"><img src="./madarat-logo.png" alt="Madarat Development &amp; Tourism" class="hero-logo"></div>
             <h1 data-en="Your Strategic Partner in Hospitality Development & Tourism" data-ar="شريكك الاستراتيجي في تطوير الضيافة والسياحة">Your Strategic Partner in Hospitality Development & Tourism</h1>
             <h2 data-en="Your Trusted Hospitality Partner in the Kingdom" data-ar="شريككم الموثوق في قطاع الضيافة بالمملكة">Your Trusted Hospitality Partner in the Kingdom</h2>
