@@ -178,18 +178,16 @@
             gap: 10px;
         }
 
-        /* Hero (non-scrolled) state: center the lang toggle absolutely */
+        /* Hero (non-scrolled) state: toggle floats to the right */
         .nav-right {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 40px;
         }
 
         /* Scrolled: restore to normal right-aligned flow */
         .navbar.scrolled .nav-right {
             position: static;
-            left: auto;
-            transform: none;
+            right: auto;
         }
 
         .nav-logo img {
@@ -259,10 +257,21 @@
             padding: 0 20px;
         }
 
+        .hero-tagline {
+            color: var(--gold-light);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto 0;
+            opacity: 0.9;
+        }
+
         .hero-logo-wrap {
             display: flex;
             justify-content: center;
-            margin: 70px auto 30px;
+            margin: 18px auto 30px;
             animation: fadeInDown 1s ease;
         }
 
@@ -1153,9 +1162,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-logo-wrap"><img src="./madarat-logo.png" alt="Madarat Development & Tourism" class="hero-logo"></div>
+            <p class="hero-tagline fade-in" data-en="Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة &mdash; المملكة العربية السعودية">Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia</p>
+            <div class="hero-logo-wrap"><img src="./madarat-logo.png" alt="Madarat Development &amp; Tourism" class="hero-logo"></div>
             <h1 data-en="Your Strategic Partner in Hospitality Development & Tourism" data-ar="شريكك الاستراتيجي في تطوير الضيافة والسياحة">Your Strategic Partner in Hospitality Development & Tourism</h1>
-            <h2 data-en="Madarat Development & Tourism — Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة — المملكة العربية السعودية">Madarat Development & Tourism — Kingdom of Saudi Arabia</h2>
+            <h2 data-en="Your Trusted Hospitality Partner in the Kingdom" data-ar="شريككم الموثوق في قطاع الضيافة بالمملكة">Your Trusted Hospitality Partner in the Kingdom</h2>
             <p data-en="Our management team brings more than 30 years of regional hospitality and hotel sales experience — delivering deep local market expertise and established industry relationships across the Kingdom." data-ar="تجمع إدارتنا أكثر من 30 عاماً من الخبرة الإقليمية في قطاعَي الضيافة ومبيعات الفنادق، مع معرفة عميقة بالسوق المحلي وعلاقات راسخة في المملكة العربية السعودية.">Our management team brings more than 30 years of regional hospitality and hotel sales experience — delivering deep local market expertise and established industry relationships across the Kingdom.</p>
             <div class="hero-cta">
                 <a href="https://wa.me/966541932245?text=Hello%20Madarat%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" class="btn btn-whatsapp" target="_blank">
@@ -1354,7 +1364,7 @@
             <h2 data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h2>
             <p data-en="Tell us about your project and we'll respond within 24 hours" data-ar="أخبرنا عن مشروعك وسنرد عليك خلال 24 ساعة">Tell us about your project and we'll respond within 24 hours</p>
         </div>
-        <form class="contact-form fade-in" action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <form class="contact-form fade-in" action="https://formspree.io/f/xrevdrvb" method="POST">
             <div class="form-row">
                 <input type="text" name="name" required placeholder="Your Name" data-en="Your Name" data-ar="اسمك">
                 <input type="email" name="email" required placeholder="Your Email" data-en="Your Email" data-ar="بريدك الإلكتروني">
