@@ -184,26 +184,18 @@
             display: flex;
         }
 
-        /* Tagline row: visible only in transparent hero state */
-        .navbar-tagline {
-            text-align: center;
+        /* Tagline above hero logo */
+        .hero-tagline {
             color: var(--gold-light);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            padding: 0 0 10px;
-            opacity: 0.9;
-            transition: opacity 0.4s, max-height 0.4s, padding 0.4s;
-            overflow: hidden;
-            max-height: 36px;
-        }
-
-        /* Hide tagline when scrolled */
-        .navbar.scrolled .navbar-tagline {
-            max-height: 0;
-            padding: 0;
-            opacity: 0;
+            text-align: center;
+            margin: 0 auto 22px;
+            opacity: 0.95;
+            line-height: 1.5;
+            animation: fadeInDown 0.8s ease;
         }
 
         .navbar.scrolled {
@@ -1184,12 +1176,12 @@
                 </button>
             </div>
         </div>
-        <div class="navbar-tagline" data-en="Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة &mdash; المملكة العربية السعودية">Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia</div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <p class="hero-tagline" data-en="Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia" data-ar="مدارات التطوير والسياحة &mdash; المملكة العربية السعودية">Madarat Development &amp; Tourism &mdash; Kingdom of Saudi Arabia</p>
             <div class="hero-logo-wrap"><img src="./madarat-logo.png" alt="Madarat Development &amp; Tourism" class="hero-logo"></div>
             <h1 data-en="Your Strategic Partner in Hospitality Development & Tourism" data-ar="شريكك الاستراتيجي في تطوير الضيافة والسياحة">Your Strategic Partner in Hospitality Development & Tourism</h1>
             <h2 data-en="Your Trusted Hospitality Partner in the Kingdom" data-ar="شريككم الموثوق في قطاع الضيافة بالمملكة">Your Trusted Hospitality Partner in the Kingdom</h2>
